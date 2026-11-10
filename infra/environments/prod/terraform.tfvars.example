@@ -1,0 +1,5 @@
+aws_region  = "us-east-1"
+domain_name = "crosshairc2.com"
+environment = "prod"
+project     = "crosshair-c2"
+team        = "engineering"

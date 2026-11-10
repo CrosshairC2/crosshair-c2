@@ -1,0 +1,4 @@
+aws_region        = "us-east-1"
+state_bucket_name = "crosshair-c2-terraform-state" # must be globally unique across all of S3
+project           = "crosshair-c2"
+team              = "engineering"

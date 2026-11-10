@@ -1,0 +1,36 @@
+:host {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.radar-sweep__grid {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-radial-gradient(circle at 50% 50%, transparent 0 60px, var(--color-border) 61px 62px),
+    repeating-linear-gradient(0deg, transparent 0 39px, var(--color-border) 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, var(--color-border) 40px);
+  mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+}
+
+.radar-sweep__beam {
+  position: absolute;
+  inset: -20%;
+  background: conic-gradient(from 0deg, transparent 0deg, var(--color-accent-soft) 10deg, transparent 45deg);
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .radar-sweep__beam {
+    animation: radar-rotate 8s linear infinite;
+  }
+}
+
+@keyframes radar-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

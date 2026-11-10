@@ -1,0 +1,15 @@
+<section id="audience" class="audience" aria-labelledby="audience-heading">
+  <div class="container">
+    <p class="eyebrow">Who We Serve</p>
+    <h2 id="audience-heading" class="audience__heading">Government and commercial customers.</h2>
+
+    <ul class="audience__grid">
+      @for (item of audiences; track item.title) {
+        <li class="audience__card">
+          <h3 class="audience__card-title">{{ item.title }}</h3>
+          <p class="audience__card-description">{{ item.description }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

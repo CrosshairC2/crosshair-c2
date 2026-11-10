@@ -1,0 +1,15 @@
+<section id="capabilities" class="capabilities" aria-labelledby="capabilities-heading">
+  <div class="container">
+    <p class="eyebrow">Capabilities</p>
+    <h2 id="capabilities-heading" class="capabilities__heading">Built for continuous data flow.</h2>
+
+    <ul class="capabilities__grid">
+      @for (item of capabilities; track item.title) {
+        <li class="capabilities__card">
+          <h3 class="capabilities__card-title">{{ item.title }}</h3>
+          <p class="capabilities__card-description">{{ item.description }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

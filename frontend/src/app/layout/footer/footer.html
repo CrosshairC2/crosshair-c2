@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="footer__brand" href="#hero" aria-label="Crosshair C2 home">
+      <app-crosshair-mark [size]="20" />
+      <span>CROSSHAIR C2</span>
+    </a>
+
+    <nav class="footer__nav" aria-label="Footer">
+      @for (link of navLinks; track link.id) {
+        <a class="footer__link" [href]="'#' + link.id">{{ link.label }}</a>
+      }
+    </nav>
+
+    <p class="footer__meta">
+      © {{ year }} Crosshair C2 ·
+      <a class="footer__link" href="mailto:contact@crosshairc2.com">contact&#64;crosshairc2.com</a>
+    </p>
+  </div>
+</footer>

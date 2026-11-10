@@ -1,0 +1,20 @@
+.contact {
+  padding-block: var(--space-16);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.contact__content {
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+.contact__heading {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.contact__body {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}

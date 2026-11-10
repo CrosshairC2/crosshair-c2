@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="header__inner container">
+    <a class="header__brand" href="#hero" aria-label="Crosshair C2 home">
+      <app-crosshair-mark [size]="28" />
+      <span class="header__wordmark">CROSSHAIR C2</span>
+    </a>
+
+    <button
+      class="header__toggle"
+      type="button"
+      [attr.aria-expanded]="mobileNavOpen()"
+      aria-controls="primary-nav"
+      aria-label="Toggle navigation menu"
+      (click)="toggleNav()"
+    >
+      <span class="header__toggle-bar"></span>
+      <span class="header__toggle-bar"></span>
+      <span class="header__toggle-bar"></span>
+    </button>
+
+    <nav
+      id="primary-nav"
+      class="header__nav"
+      aria-label="Primary"
+      [class.header__nav--open]="mobileNavOpen()"
+    >
+      @for (link of navLinks; track link.id) {
+        <a
+          class="header__link"
+          [href]="'#' + link.id"
+          [attr.aria-current]="activeId() === link.id ? 'true' : null"
+          (click)="closeNav()"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+  </div>
+</header>
